@@ -1,0 +1,26 @@
+
+{% extends 'layout.html' %}
+
+
+{% block titulo %}
+    Home 
+{% endblock titulo %}
+    
+{% block contenido %}
+    <h3>Listado de programas</h3>
+    <p>Hora: {{ hora }}</p>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+        </tr>
+        {% for programa in programas %}
+            <tr>
+                <td>{{ programa.id }}</td>
+                <td>{{ programa.nombre }}</td>
+                <td>{{ programa.descripcion }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock contenido %}
